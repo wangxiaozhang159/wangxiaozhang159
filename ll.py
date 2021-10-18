@@ -20,9 +20,6 @@ def cj():#采集目录页面里面文章的url
     tit_urls = 'http://mrxwlb.com/2021/10/'
     html = etree.HTML(get_text(tit_urls, headers))
     wz_url_list = html.xpath('//p[@class ="read-more"]/a/@href')
-    #name_list = html.xpath('//section[@class="entry-content"]/p/strong/text()')
-    # now = datetime.datetime.now()
-    # jieguo = dict(zip(name_list, wz_url_list))
     jieguo = list(wz_url_list)
     #print(jieguo)
     return jieguo
